@@ -6,13 +6,14 @@ export async function POST(request) {
     const url = body.url;
 
     if (!url || !ytdl.validateURL(url)) {
-      return Response.json({ message: "not valid url" });
+      return Response.json({ message: "Invalid URL" }, { status: 400 });
     }
 
-    const x = await ytdl.getInfo(url, {
+    const info = await ytdl.getInfo(url, {
       requestOptions: {
         headers: {
-          "User-Agent": "Mozilla/5.0",
+          "User-Agent":
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
         },
       },
     });
@@ -22,7 +23,7 @@ export async function POST(request) {
       success: true,
       error: false,
       message: "Data fetched successfully",
-      result: x,
+      result: info,
     });
     // } else {
     //   return Response.json({
@@ -32,7 +33,7 @@ export async function POST(request) {
     //   });
     // }
   } catch (error) {
-    console.error("Fetch error:", error.message);
+    // console.error("Fetch error:", error.message);
     return Response.json(
       {
         success: false,
