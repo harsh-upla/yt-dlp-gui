@@ -80,6 +80,7 @@ export default function Home() {
   const [fetchedFormats, setfetchedFormats] = useState([]);
   // const [optForm, setoptForm] = useState({})
   const [selectedItag, setselectedItag] = useState("");
+  const [videoURL, setvideoURL] = useState("")
 
   const handleFetchdata = async () => {
     if (!url) {
@@ -101,7 +102,7 @@ export default function Home() {
     let response = await res.json();
 
     if (response) {
-      // console.log(response);
+      // console.log(response.result);
       // console.log(response.result.videoDetails.title); //works
       let details = response.result.videoDetails;
       // console.log(details);
@@ -155,10 +156,12 @@ export default function Home() {
     // console.log(availableFormats);
     // setfetchedFormats(hasFullFormats);
     // console.log(fetchedFormats);
+    setvideoURL(response.result.videoUrl)
     if (!thumbNail.length < 4 && title.length < 2) {
       setloading(false);
       setfetched(true);
     }
+    
   };
 
   const pasteUrl = async () => {
@@ -177,7 +180,7 @@ export default function Home() {
   return (
     <div className="bg-[#fadcdcb2] min-h-[90vh]">
       <h1 className="text-2xl font-bold text-center pt-5">
-        Just paste the link and go .......
+        Just paste the link and Watch any video without ads.
       </h1>
 
       <div className="pt-10">
@@ -220,7 +223,8 @@ export default function Home() {
         {loading && <InfinitySpin color="#6a2727" />}
         {!loading && fetched ? (
           <div className="flex flex-col items-center justify-center">
-            <h1 className="font-bold text-xl underline mb-5">Video Details</h1>
+            <video className="w-[90vw]" src={videoURL} controls></video>
+            {/* <h1 className="font-bold text-xl underline mb-5">Video Details</h1>
             <img
               className="w-xl h-80"
               src={thumbNail ?? "thumbnail not fetched"}
@@ -260,19 +264,19 @@ export default function Home() {
                 Download
                 <FaDownload />
               </button>
-            </div>
+            </div> */}
           </div>
         ) : (
           <div className="">Fetched data will show here.</div>
         )}
-        <ul className="list-disc flex flex-col items-start justify-center">
+        {/* <ul className="list-disc flex flex-col items-start justify-center">
           Please Note :<li>This only works for one video at a time ...</li>
           <li>playlist download is not supported ...</li>
           <li>
             if you face any error while loading just refresh and paste link
             again ...
           </li>
-        </ul>
+        </ul> */}
       </div>
     </div>
   );
