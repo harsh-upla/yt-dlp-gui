@@ -8,7 +8,7 @@ const Navbar = () => {
         <Link href={"/"} className="headtext text-4xl font-bold flex items-center justify-center w-fit ">
           Yt-Dlp
         </Link>
-        <Link className="bg-[#795050] px-5 py-1  flex gap-3 items-center rounded-lg" href={"/github"}>
+        <Link className="bg-[#795050] px-5 py-1  flex gap-3 items-center rounded-lg" href={"https://github.com/harsh-upla/yt-dlp-gui"}>
           <img src="/github.svg" className="size-12" alt="github" />
           <span className="text-xl">Github</span>
         </Link>
