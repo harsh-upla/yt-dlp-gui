@@ -128,12 +128,12 @@ export default function Home() {
     const hasFullFormats = rawFormats.filter((item) => {
       return item.hasAudio === true && item.hasVideo === true;
     });
-    console.log(
-      "npcFormats",
-      rawFormats.filter((item) => {
-        return item.hasVideo === false && item.hasAudio == false;
-      }),
-    );
+    // console.log(
+    //   "npcFormats",
+    //   rawFormats.filter((item) => {
+    //     return item.hasVideo === false && item.hasAudio == false;
+    //   }),
+    // );
     // console.log("hasvideo", hasVideoFormats);
     // console.log("hasAudio", hasAudioFormats);
     // console.log("hasFull", hasFullFormats);
