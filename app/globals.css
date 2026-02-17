@@ -1,0 +1,105 @@
+@import "tailwindcss";
+/*  
+ * {
+     margin: 0;
+     padding: 0;
+ }
+
+ body {
+     background-color: #ffcaca;
+ }
+
+ header {
+     background-color: #6a2727;
+     padding: 20px;
+ }
+
+ .headtext {
+     font-family: "Jersey 25", sans-serif;
+     font-weight: 400;
+     font-style: normal;
+     color: white;
+     font-size: 80px;
+     padding-left: 50px;
+ }
+
+ .section {
+     display: flex;
+     justify-content: center;
+ }
+
+ #sec1 {
+     margin-top: 25vh;
+     gap: 10px;
+ }
+
+ #url-input {
+     padding: 10px 50px 10px 10px;
+     border: none;
+     border-radius: 8px;
+
+ }
+
+ button {
+     cursor: pointer;
+ }
+
+ #paste-btn {
+     border: none;
+     padding: 10px 20px;
+     border-radius: 8px;
+     background: #6a2727;
+     color: white;
+ }
+
+ #sec2 {
+     margin-top: 10vh;
+     flex-direction: column;
+     gap: 5px;
+     display: flex !important;
+     justify-content: center;
+     align-items: center;
+ }
+
+ #sec3 {
+     margin-top: 5vh;
+     gap: 10px;
+ }
+
+ #sec4 {
+     margin-top: 5vh;
+ }
+
+ #Download-btn {
+     border: none;
+     padding: 10px 100px;
+     border-radius: 8px;
+     background: #6a2727;
+     color: white;
+ }
+
+ #paste-btn:hover {
+     cursor: pointer;
+     background-color: #aa3c3c;
+ }
+
+ #Q-selection {
+     border: none;
+     padding: 5px;
+     border-radius: 5px;
+ }
+
+ #F-selection {
+     border: none;
+     padding: 5px;
+     border-radius: 5px;
+ }
+
+ #Download-btn:hover {
+     cursor: pointer;
+     background-color: #aa3c3c;
+ }
+
+ .btn:active {
+     background-color: #6a2727;
+ } */
